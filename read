@@ -1,0 +1,3 @@
+源码编译说明：
+1、工程使用jdk1.8版本；
+2、需要重新编译common模块，通过cmd，进入common目录，使用mvn clean compile -Dcheckstyle.skip=true进行编译;
