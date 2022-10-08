@@ -7,7 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @author chenchen17308
+ * @author chenchen
  * @Description 客户端接收处理方法
  * @date 2022-10-07 22:02
  **/
@@ -16,6 +16,7 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;
         System.out.println("客户端读取到信息:"+ byteBuf.toString(StandardCharsets.UTF_8));
+        System.out.print("请输入:");
     }
 
     @Override

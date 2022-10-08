@@ -16,7 +16,7 @@ import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @author chenchen17308
+ * @author chenchen
  * @Description
  * @date 2022-10-07 22:01
  **/
@@ -38,8 +38,8 @@ public class EchoClient {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String sValue = "";
             ChannelFuture future = null;
+            System.out.print("请输入：");
             while (true){
-                System.out.println("请输入：");
                 sValue = bufferedReader.readLine();
                 if (sValue.equals("exit")) break;
                 future = channel.writeAndFlush(Unpooled.wrappedBuffer(sValue.getBytes(StandardCharsets.UTF_8)));
